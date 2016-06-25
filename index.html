@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="musicApp">
   <head>
     <meta charset="utf-8">
     <title>Awesome Directive Practice</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="js/scripts/alertify.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script type="text/javascript" src="js/scripts/alertify.js"></script>
   </head>
-  <body>
+  <body ng-controller="mainController">
+
+    <header>
+      <img src="js/images/logo.png" alt="Logo" />
+
+      <div class="search">
+        <input type="text" name="search" placeholder="Search...">
+        <div class="suggestors">
+          <p>Kenye</p>
+          <p>Power</p>
+          <p>U2</p>
+          <p>Blink 182</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      {{name}}
+    </div>
 
 
-    
+    <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/httpService.js" charset="utf-8"></script>
+    <script src="js/mainController.js" charset="utf-8"></script>
+    <script src="js/myDirectives.js" charset="utf-8"></script>
   </body>
 </html>
