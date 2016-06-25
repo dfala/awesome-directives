@@ -1,3 +1,15 @@
 <div class="search">
-  <input type="text" name="search" placeholder="Search...">
+  <form ng-submit="searchSong(query)" autocomplete="off">
+    <input type="text" name="search"
+           ng-focus="openSuggestors = true"
+           placeholder="Search..." ng-model="query"/>
+  </form>
+
+  <div class="suggestors" ng-show="openSuggestors && queries.length > 0">
+    <p ng-repeat="suggestion in queries | filter:query | limitTo:'5' track by $index"
+       ng-click="passSuggestion(suggestion)" suggest-query>
+      {{suggestion}}
+    </p>
+  </div>
+
 </div>
